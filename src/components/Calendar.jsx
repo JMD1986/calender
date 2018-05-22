@@ -83,12 +83,17 @@ class Calendar extends React.Component {
       {days}
     </div>
         );
+          days = [];
+
     }
-    days = [];
     return <div className="body">{rows}</div>;
   }
 
-  onDateClick = day => {};
+  onDateClick = day => {
+  this.setState({
+    selectedDate: day
+  });
+};
 
   nextMonth = () => {
     this.setState({
